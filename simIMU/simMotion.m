@@ -1,6 +1,7 @@
 clear;clc;close all
 
-plotFlag = 0;
+plotFlag = 1;
+axis_length = 5;
 
 % Time
 dt = 0.01;
@@ -49,9 +50,9 @@ writematrix([t' pose], filename);
 
 if plotFlag == 1
     figure(1)
-    axis_length = 5;
-    for i = 1:length(q)
     
+    for i = 1:length(q)
+        
         plotPose(position(i,:), q(i,:))
         view(45,45)
     
@@ -69,3 +70,18 @@ if plotFlag == 1
         drawnow
     end
 end
+
+
+figure(2)
+plot3(position_x, position_y, position_z, 'LineWidth',3)
+
+axis equal;
+xlim([-axis_length axis_length])
+ylim([-axis_length axis_length])
+zlim([-axis_length axis_length])
+xlabel('X')
+ylabel('Y')
+zlabel('Z')
+grid on
+box on
+title('Trajectory')

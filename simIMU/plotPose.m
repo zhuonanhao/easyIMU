@@ -26,6 +26,7 @@ quiver3(position(1), position(2), position(3), rotated_vectors(3, 1), rotated_ve
 
 % Highlight the origin (0,0,0)
 plot3(0, 0, 0, 'ko', 'MarkerFaceColor', 'k', 'MarkerSize', 8); % Black point at the origin
+scatter3(position(1), position(2), position(3), 'ro')
 
 hold off;
 

@@ -42,7 +42,7 @@ class NeuralODE(nn.Module):
         physical_output = nonlinear_dynamics(y)
 
         # Combine the outputs with a 0.5 weight on each
-        combined_output = 0.1 * neural_output + 0.9 * physical_output
+        combined_output = 1.0 * neural_output + 0. * physical_output
 
         return combined_output  # Return the combined dynamics
 

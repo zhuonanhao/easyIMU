@@ -20,3 +20,11 @@
    ```base
    pip install -r requirements.txt
    ```
+
+- Work done
+
+1. IMU model (forward and inverse)
+
+2. Neural network (dimension reduction + neuralODE)
+
+3. NeuralODE (pure linear with/without physical model)
