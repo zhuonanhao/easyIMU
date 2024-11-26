@@ -37,14 +37,8 @@ class NeuralODE(nn.Module):
     def forward(self, t, y):
         # Neural network output
         neural_output = self.net(y)
-
-        # Physical model output
-        physical_output = nonlinear_dynamics(y)
-
-        # Combine the outputs with a 0.5 weight on each
-        combined_output = 1.0 * neural_output + 0. * physical_output
-
-        return combined_output  # Return the combined dynamics
+        
+        return neural_output
 
 # Define a model to reduce the input dimension
 class DimensionalityReduction(nn.Module):

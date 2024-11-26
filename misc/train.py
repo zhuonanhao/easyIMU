@@ -63,6 +63,8 @@ all_outputs = np.vstack(all_outputs)
 inputs_tensor = torch.tensor(all_inputs, dtype=torch.float32).to(device)
 outputs_tensor = torch.tensor(all_outputs, dtype=torch.float32).to(device)
 
+print(outputs_tensor.shape)
+
 # Training setup
 epochs = 500
 checkpoint_interval = 50
